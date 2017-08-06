@@ -6,13 +6,15 @@
 package com.example.demo.dao;
 
 import com.example.demo.entity.Student;
-import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author MAC
  */
-@Transactional
 public interface StudentRepository extends JpaRepository<Student, Long> {
+
+    public void delete(Long id);
+
+    public Student findOne(Long id);
 }

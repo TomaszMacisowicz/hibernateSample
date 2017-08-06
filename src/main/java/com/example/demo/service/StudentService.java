@@ -5,14 +5,23 @@
  */
 package com.example.demo.service;
 
-import com.example.demo.entity.Book;
+import com.example.demo.entity.Student;
 import java.util.Collection;
 
 /**
  *
  * @author MAC
  */
-public interface BookService {
+public interface StudentService {
 
-    Collection<Book> getAll();
+    void add(Student student);
+
+    void deleteStudentById(Long id);
+
+    Student getStudentById(Long id);
+
+    void updateStudent(Student student);
+
+    Collection<Student> getAllStudents();
+
 }
